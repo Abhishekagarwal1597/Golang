@@ -8,8 +8,10 @@
  */
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-    // Initialize a dummy node as the head of the result list
+    // Initialize a dummy node as the head of the result list, for keeping the head 
     dummy := &ListNode{Val: 0, Next: nil}
+
+    //or initilize it as empty, result := &ListNode{}
     // Initialize a pointer to the current tail of the result list
     tail := dummy
     
