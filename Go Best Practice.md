@@ -14,3 +14,9 @@ for initialization; condition; post {
     // statement(s)
 }
 
+
+3- Creating array in go
+var myArray [5]int
+myArray := [5]int{1, 2, 3, 4, 5}
+myArray := [...]int{1, 2, 3, 4, 5}
+
