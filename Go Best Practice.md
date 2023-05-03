@@ -20,3 +20,16 @@ var myArray [5]int
 myArray := [5]int{1, 2, 3, 4, 5}
 myArray := [...]int{1, 2, 3, 4, 5}
 
+4- In Go, you can declare and initialize a variable using the := shortcut notation. This shorthand declaration syntax can be used only within functions, as it declares and initializes a variable at the same time.
+Ex - func example() {
+    count := 0 // shorthand declaration and initialization
+    // use count here
+}
+
+#with var,
+func example() {
+    var count int // declaration
+    count = 0 // initialization
+    // use count here
+}
+
