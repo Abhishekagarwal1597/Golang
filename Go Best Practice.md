@@ -19,6 +19,7 @@ for initialization; condition; post {
 var myArray [5]int
 myArray := [5]int{1, 2, 3, 4, 5}
 myArray := [...]int{1, 2, 3, 4, 5}
+var slice []int //for creating a null slice
 
 4- In Go, you can declare and initialize a variable using the := shortcut notation. This shorthand declaration syntax can be used only within functions, as it declares and initializes a variable at the same time.
 Ex - func example() {
@@ -33,3 +34,6 @@ func example() {
     // use count here
 }
 
+5- The append() function in Go takes one or more slices as input and returns a new slice that contains all the elements of the input slices. 
+slice = append(slice, value)
+Note that the append() function returns a new slice, so you need to assign the result back to the original slice variable to update the array.
