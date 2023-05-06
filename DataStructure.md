@@ -21,9 +21,15 @@ The following is an example of a singly linked list with three nodes:
 
 In this example, head is a reference to the first node in the list, which has a value of 1 and a reference to the second node. The second node has a value of 2 and a reference to the third node, and so on. The last node in the list has a value of 3 and a reference to nil, indicating the end of the list.
 
-# Use slow pointer, fast pointer approch to resolve the linked list for detecting the loop, finding the mid element in linked list.
+    Use slow pointer, fast pointer approch to resolve the linked list for detecting the loop, finding the mid element in linked list.
+    Use Hash Table for solving the DS question.
+    
+Tree Traversal Method:
+Pre-order - root --> left --> right
+In-order- left --> root --> right
+Post-order- left --> right --> root
 
-# Use Hash 
+
 
 
 
