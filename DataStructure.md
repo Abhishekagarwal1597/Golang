@@ -29,6 +29,24 @@ Pre-order - root --> left --> right
 In-order- left --> root --> right
 Post-order- left --> right --> root
 
+**Binary Tree**:
+A binary tree is a type of tree data structure in which each node can have at most two children, commonly referred to as the left child and the right child. The binary tree follows a hierarchical structure, with a single node at the top called the root node. Each node in the binary tree can have zero, one, or two children.
+
+Here are a few key characteristics of a binary tree:
+
+1- Root Node: The topmost node in the binary tree is called the root node. It serves as the starting point for traversing the tree.
+2- Parent and Child Nodes: Each node in a binary tree can have at most two children. These children are referred to as the left child and the right child. A node that has a child is considered the parent of that child.
+3- Leaf Nodes: Leaf nodes are nodes that have no children. They are located at the bottom of the tree.
+4- Internal Nodes: Internal nodes are nodes that have at least one child. They are located between the root node and the leaf nodes.
+
+Binary trees are commonly used to represent hierarchical structures, such as binary search trees, expression trees, and decision trees. They provide efficient searching, insertion, and deletion operations when appropriately balanced.
+
+Example: 
+       4
+     /   \
+    2     6
+   / \   / \
+  1   3 5   7
 
 
 
