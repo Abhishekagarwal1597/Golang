@@ -48,7 +48,8 @@ Example:
    / \   / \
   1   3 5   7
 
-
+#Binary Search- use binary serarch to get o(logn), time complexity. it divide the serarch in half and do the iterarion.
+if the list is sorted always try to use binary serarhc on them.
 
 
 
