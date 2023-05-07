@@ -37,3 +37,10 @@ func example() {
 5- The append() function in Go takes one or more slices as input and returns a new slice that contains all the elements of the input slices. 
 slice = append(slice, value)
 Note that the append() function returns a new slice, so you need to assign the result back to the original slice variable to update the array.
+
+6- slice in Go - use slice operation to truncate it 
+a := [...]int{0, 1, 2, 3} // an array
+s := a[1:3]               // s == []int{1, 2}        cap(s) == 3
+s = a[:2]                 // s == []int{0, 1}        cap(s) == 4
+s = a[2:]                 // s == []int{2, 3}        cap(s) == 2
+s = a[:]                  // s == []int{0, 1, 2, 3}  cap(s) == 4
