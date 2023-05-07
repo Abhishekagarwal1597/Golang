@@ -29,7 +29,7 @@ Pre-order - root --> left --> right
 In-order- left --> root --> right
 Post-order- left --> right --> root
 
-**Binary Tree**:
+**Binary Tree**: A binary tree is a non linear data structure, 
 A binary tree is a type of tree data structure in which each node can have at most two children, commonly referred to as the left child and the right child. The binary tree follows a hierarchical structure, with a single node at the top called the root node. Each node in the binary tree can have zero, one, or two children.
 
 Here are a few key characteristics of a binary tree:
@@ -48,9 +48,12 @@ Example:
    / \   / \
   1   3 5   7
 
-#Binary Search- use binary serarch to get o(logn), time complexity. it divide the serarch in half and do the iterarion.
+****Binary Search Tree** - use binary serarch to get o(logn), time complexity. it divide the serarch in half and do the iterarion.
 if the list is sorted always try to use binary serarhc on them.
+Binary search tree is a binary tree in which a node have a value greater than all values in its left subtree and smaller than all values in its right subtree
+In a binary search tree, each node has **at most two children**: a left child and a right child. The left child of a node contains a value that is less than the value of the node, and the right child contains a value that is greater than the value of the node.
 
+In the case of a single-element binary search tree [0], there is only one node, and it does not have any children. Since there are no children to compare values with, the condition for a binary search tree is automatically satisfied, and thus, it is a valid binary search tree.
 
-
+**Assuming an empty tree is considered a valid BST.**
 
