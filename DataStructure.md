@@ -24,10 +24,10 @@ In this example, head is a reference to the first node in the list, which has a 
     Use slow pointer, fast pointer approch to resolve the linked list for detecting the loop, finding the mid element in linked list.
     Use Hash Table for solving the DS question.
     
-Tree Traversal Method:
-Pre-order - root --> left --> right
-In-order- left --> root --> right
-Post-order- left --> right --> root
+**Tree Traversal Method:**
+Pre-order : root --> left --> right,
+In-order : left --> root --> right,
+Post-order : left --> right --> root
 
 **Binary Tree**: A binary tree is a non linear data structure, 
 A binary tree is a type of tree data structure in which each node can have at most two children, commonly referred to as the left child and the right child. The binary tree follows a hierarchical structure, with a single node at the top called the root node. Each node in the binary tree can have zero, one, or two children.
