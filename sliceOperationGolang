@@ -3,38 +3,30 @@ In Go, you can perform various operations on slices using built-in functions and
 Here are examples of how to perform these operations in Go:
 
 Creating a slice:
-
-go
-Copy code
 // Using a literal syntax
 mySlice := []int{1, 2, 3}
-
 // Using the make() function
 mySlice := make([]int, 5)
-Appending elements to a slice:
 
-go
-Copy code
+Appending elements to a slice:
 mySlice := []int{1, 2, 3}
 mySlice = append(mySlice, 4, 5)
-Accessing elements in a slice:
 
-go
-Copy code
+Accessing elements in a slice:
 mySlice := []int{1, 2, 3}
 fmt.Println(mySlice[0]) // Output: 1
-Slicing a slice (creating a new slice from an existing slice):
 
-go
-Copy code
+Slicing a slice (creating a new slice from an existing slice):
 mySlice := []int{1, 2, 3, 4, 5}
 slicedSlice := mySlice[1:3] // Slice from index 1 (inclusive) to index 3 (exclusive)
-Modifying elements in a slice:
 
-go
-Copy code
+Modifying elements in a slice:
 mySlice := []int{1, 2, 3}
 mySlice[0] = 10
+
+copy method to copy a slice to another slice:
+copy(destSlice []T, srcSlice []T) int
+
 These are just a few examples of slice operations in Go. Go provides a rich set of functionalities for working with slices, including sorting, searching, filtering, and more. You can explore the Go documentation for more details on slice operations and available functions in the slice package: https://golang.org/pkg/builtin/#append
 
 Additionally, the Go standard library provides packages like sort, strings, and strconv that offer even more operations and utilities for working with slices and other data types.
