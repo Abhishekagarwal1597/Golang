@@ -1,0 +1,81 @@
+sync.WaitGroup and sync.Mutex are both synchronization mechanisms in Go that serve different purposes.
+
+sync.WaitGroup:
+A sync.WaitGroup is used to wait for a collection of goroutines to finish their execution before proceeding further. It allows you to synchronize the execution of multiple goroutines. You can think of it as a counter that keeps track of the number of goroutines that are currently active. When a goroutine finishes its execution, it signals the sync.WaitGroup by calling the Done() method. The calling goroutine, usually the main goroutine, can then wait for all the goroutines to finish by calling the Wait() method. The program will block until all the goroutines have completed.
+
+Here's a simple example that demonstrates the usage of sync.WaitGroup:
+
+go
+Copy code
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	var wg sync.WaitGroup
+
+	// Launching 3 goroutines
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func(id int) {
+			fmt.Printf("Goroutine %d started\n", id)
+			// Simulating some work
+			// ...
+			fmt.Printf("Goroutine %d finished\n", id)
+			wg.Done()
+		}(i)
+	}
+
+	// Waiting for all goroutines to finish
+	wg.Wait()
+
+	fmt.Println("All goroutines completed")
+}
+In this example, we launch three goroutines using a loop. Each goroutine performs some work and then calls wg.Done() to indicate its completion. The wg.Add(1) call is used to increment the counter of active goroutines. Finally, we call wg.Wait() to block until all the goroutines have finished.
+
+sync.Mutex:
+A sync.Mutex is used to provide mutual exclusion, allowing only one goroutine to access a shared resource at a time. It helps prevent data races by ensuring that concurrent access to a shared resource is properly synchronized. A mutex has two main methods: Lock() and Unlock(). When a goroutine wants to access the shared resource, it acquires the mutex by calling Lock(). After finishing its work, it releases the mutex by calling Unlock(), allowing other goroutines to acquire it.
+
+Here's a simple example that demonstrates the usage of sync.Mutex:
+
+go
+Copy code
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var counter int
+var mutex sync.Mutex
+
+func increment() {
+	mutex.Lock()
+	counter++
+	mutex.Unlock()
+}
+
+func main() {
+	var wg sync.WaitGroup
+
+	// Launching 3 goroutines to increment the counter
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			increment()
+		}()
+	}
+
+	// Waiting for all goroutines to finish
+	wg.Wait()
+
+	fmt.Println("Counter:", counter)
+}
+In this example, we have a shared variable counter that we want to increment using multiple goroutines. The increment() function acquires the mutex using Lock() before incrementing the counter and releases it using Unlock() afterward. This ensures that only one goroutine can access the shared counter at any given time, preventing race conditions.
+
+To summarize, sync.WaitGroup is used to wait for a group of goroutines to finish, while sync.Mutex is used to provide mutual exclusion and prevent data races when accessing shared resources. They serve different purposes in concurrent programming and are often used together to coordinate and synchronize goroutine execution.
