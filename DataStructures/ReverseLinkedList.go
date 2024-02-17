@@ -22,7 +22,7 @@ func reverseList(head *ListNode) *ListNode {
       
       // Otherwise, loop through the list
         for head != nil {
-            // Set next to the current node's next node
+            // Set next to the current node's next node. Initialized next variable to store the next node in the list before modifying the head.Next
             next = head.Next
             // Set the current node's next node to the previous node
             head.Next = prev
